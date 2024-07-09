@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+:root{
+    --text: #F5F6ED;
+    --background: #131410;
+    --primary: #975132;
+    --secondary: #A66A2C;
+    --accent: #D5AA72;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    height: 1000vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px;
+    background-color: var(--background);
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 36px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.logo span {
+    color: var(--primary);
+    
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+nav a {
+    font-size: 18px;
+    background-color: transparent;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-left: 35px;
+    border-radius: 2rem;
+    transition: 0.5s;
+}
+nav a:hover,
+nav a.active {
+    background-color: var(--secondary);
+}
+
+
+
+.header {
+    padding:  5%;
+    font-size: 18px;
+    height: 100vh;
+}
+
+
+
+.header-text {
+    color: var(--text);
+    margin-top: 15%;
+    padding-left: 5%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span {
+    color: var(--primary);
+}
+
+.about {
+    padding: 2rem 5%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    padding: 2rem 5%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    flex-basis: 35%;
+}
+.col-1 img {
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+.col-2 {
+    flex-basis: 60%;
+    color: var(--text);
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    color: var(--text);
+    padding: 3px 15px;
+    position: relative;
+}
+
+.col-2 h1::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--primary);
+    border-left: 5px solid var(--primary);
+    bottom: 0;
+    left: 0;
+}
+
+.col-2 h1::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--primary);
+    border-right: 5px solid var(--primary);
+    top: 0;
+    right: -1;
+}
+
+.col-2 p{
+    margin-top: 1rem;
+    line-height: 2;
+}
+
+
+.tab-title {
+    display: flex;
+    gap: 3rem;
+}
+
+.tab-links {
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.tab-links.active::after {
+    width: 50%;
+}
+.tab-contents{
+    margin-top: 1.5rem;
+    display: none;
+    
+}
+.tab-contents ul {
+    list-style: none;
+}
+.tab-contents li {
+    font-weight: 300;
+    color: rgb(187, 181, 181);
+}
+.tab-contents li span {
+    color: var(--primary);
+    line-height: 30px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.tab-contents .skill-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.skill-list li {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 16px;
+    font-weight: 300;
+    transition: transform 0.3s;  
+}
+
+.skill-list li:hover {
+    transform: scale(1.4);
+}
+.skill-list li img {
+    width: 60px;
+    height: 60px;
+   
+}
+
+.skill-list li span {
+   color: var(--text);
+}
+
+
+.tab-active{
+ display: block;
+ 
+}
+
+
+
+
+
+
